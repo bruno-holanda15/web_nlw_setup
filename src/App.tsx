@@ -1,18 +1,17 @@
+import { Header } from './components/Header';
+import { SummaryTable } from './components/SummaryTable';
 import './styles/global.css';
 
-import { Habit } from "./components/Habit";
-
-function App() {
+export function App() {
   return (
-    <div>
-      <Habit completed={2}/>
-      <Habit completed={213}/>
-      <Habit completed={22}/>
+    <div className="w-screen h-screen flex justify-center items-center">
+      <div className="w-full max-w-5xl px-6 flex-col gap-16">
+        <Header />
+        <SummaryTable />
+      </div>
     </div>
   )
 }
-
-export default App
 
 // Componentes : Reaproveitar / isolar
 // Propriedades : Uma informação enviada para modificar um componente visual ou comportamental
